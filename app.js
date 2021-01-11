@@ -1,14 +1,11 @@
-const express = require('express')
-const handlebars = require('express-handlebars')
+// expressモジュールを読み込む
+const express = require('express');
 
-const app = express()
-app.engine('hbs', handlebars({ extname: 'hbs' }))
-app.set('view engine', 'hbs')
-app.set('views', `${__dirname}/views`)
-app.get('/home', (req, res) => {
-  res.render('home', { layout: false })
-})
-app.get('/error', (req, res) => {
-  res.render('error', { layout: false })
-})
+// expressアプリを生成する
+const app = express();
+
+// ルート（http://localhost/）にアクセスしてきたときに「Hello」を返す
+app.get('/', (req, res) => res.send('Hello'));
+
+// ポート3000でサーバを立てる
 app.listen(8080, () => console.log('Running on 8080'))
