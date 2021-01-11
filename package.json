@@ -19,5 +19,9 @@
   "homepage": "https://github.com/ykyuuuuka/tag-manager#readme",
   "engines": {
     "node": "12.x.x"
+  },
+  "devDependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0"
   }
-} 
+}
